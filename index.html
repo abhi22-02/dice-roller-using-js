@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  .container
+  {
+    display: block;
+    height: 500px;
+    margin: 50px auto;
+    width: 400px;
+    border: 5px solid purple ;
+    background-color: rgb(253, 203, 253);
+    border-radius: 30px;
+  }
+  .heading
+  {
+    margin-left: 10px;
+  }
+  .dice1
+  {
+    display: block;
+    margin: 60px auto;
+    height: 280px;
+    width: 280px;
+  }
+  .btn-roll
+  {
+    width: 100px;
+    height: 30px;
+    border-radius: 50px;
+    display: block;
+    color: aliceblue;
+    background-color: purple;
+    margin: 20px auto;
+    border: 5px solid purple;
+  }
+</style>
+<body>
+  <div class="container">
+    <h1 class="heading">Dice Roller</h1>
+    <img src="./img/1.png" class="dice1" id="img-dice">
+    <button type="button" class="btn-roll" onclick="diceroll()">Roll</button>
+</div>
+  <script>
+    function diceroll()
+    {
+
+
+
+
+      
+    const min=1;
+    const max=6;
+    const randomnum=Math.round(Math.random()*(max-min)) + min;
+    console.log(randomnum);
+    
+    
+      const dice=document.getElementById("img-dice");
+      if(randomnum==1)
+      {
+        dice.src="./img/1.png";
+      }
+      else if(randomnum==2)
+      {
+        dice.src="./img/2.png"
+      }
+      else if(randomnum==3)
+      {
+        dice.src="./img/3.png"
+      }
+      else if(randomnum==4)
+      {
+        dice.src="./img/4.png"
+      }
+      else if(randomnum==5)
+      {
+        dice.src="./img/5.png"
+      }
+      else if(randomnum==6)
+      {
+        dice.src="./img/6.png"
+      }
+    }
+  </script>
+</body>
+</html>
